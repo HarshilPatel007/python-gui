@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="helloWorldWindow">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkAccelLabel">
+            <property name="width-request">226</property>
+            <property name="height-request">115</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Hello World</property>
+            <property name="justify">center</property>
+            <property name="ellipsize">middle</property>
+            <property name="angle">19.400000014528633</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold 20"/>
+              <attribute name="foreground" value="#7373d2d21616"/>
+              <attribute name="background" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">97</property>
+            <property name="y">63</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
