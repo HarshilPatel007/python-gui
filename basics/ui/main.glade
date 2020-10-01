@@ -85,6 +85,22 @@
                         <property name="position">2</property>
                       </packing>
                     </child>
+                    <child>
+                      <object class="GtkButton" id="btn_open_placesidebar">
+                        <property name="label" translatable="yes">Open PlaceSidebar Window</property>
+                        <property name="width-request">209</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <signal name="clicked" handler="on_btn_open_placesidebar_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
                     <property name="x">10</property>
@@ -121,6 +137,7 @@
               </object>
               <packing>
                 <property name="tab-expand">True</property>
+                <property name="tab-fill">False</property>
                 <property name="reorderable">True</property>
                 <property name="detachable">True</property>
               </packing>
@@ -163,6 +180,7 @@
               <packing>
                 <property name="position">1</property>
                 <property name="tab-expand">True</property>
+                <property name="tab-fill">False</property>
                 <property name="reorderable">True</property>
                 <property name="detachable">True</property>
               </packing>
@@ -205,6 +223,7 @@
               <packing>
                 <property name="position">2</property>
                 <property name="tab-expand">True</property>
+                <property name="tab-fill">False</property>
                 <property name="reorderable">True</property>
                 <property name="detachable">True</property>
               </packing>

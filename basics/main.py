@@ -12,15 +12,13 @@ class Main:
 
         screen = gdk.Screen.get_default()
         provider = gtk.CssProvider()
-        provider.load_from_path("styles/Matcha-dark-aliz/gtk-dark.css")
+        provider.load_from_path("styles/dracula/gtk.css")
         gtk.StyleContext.add_provider_for_screen(screen, provider, gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
         glade_file = "ui/main.glade"
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)
         self.builder.connect_signals(self)
-
-
 
         # btn = self.builder.get_object("btnHelloWorld")
         # btn.connect("clicked", self.HelloWorld)
@@ -43,7 +41,7 @@ class Main:
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)
         self.builder.connect_signals(self)
-        
+
         helloworld_window = self.builder.get_object("helloWorldWindow")
         helloworld_window.connect("delete-event", self.child_quit)
         helloworld_window.show()
@@ -64,10 +62,22 @@ class Main:
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)
         self.builder.connect_signals(self)
+        # self.builder.connect("destroy", self.child_quit)
 
         about_window = self.builder.get_object("aboutWindow")
         about_window.connect("delete-event", self.child_quit)
+        about_window.connect("response", lambda d, r: d.destroy())  # https://bbs.archlinux.org/viewtopic.php?id=24591
         about_window.show()
+
+    def on_btn_open_placesidebar_clicked(self, widget=None, data=None):
+        glade_file = "ui/placesidebar.glade"
+        self.builder = gtk.Builder()
+        self.builder.add_from_file(glade_file)
+        self.builder.connect_signals(self)
+
+        placesidebar_window = self.builder.get_object("placeSidebarWindow")
+        placesidebar_window.connect("delete-event", self.child_quit)
+        placesidebar_window.show()
 
 if __name__ == "__main__":
     main = Main()
